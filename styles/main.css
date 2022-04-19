@@ -15,5 +15,5 @@
 
 /* Simple defaults */
 body {
-  @apply font-sans antialiased text-yellow bg-off-black tracking-tight;
+  @apply font-sans antialiased text-yellow bg-off-black tracking-tight selection:bg-yellow selection:text-off-black;
 }
