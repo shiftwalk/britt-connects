@@ -30,7 +30,7 @@ export default function Home() {
                   <h1 className="text-[13vw] md:text-[12.4vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten">Connecting Humans</h1>
 
                   <div className="absolute inset-0 flex items-center justify-center z-0">
-                    <div className="relative overflow-hidden w-[45vw] h-[70vh] rounded-xl rotate-[-3deg] max-w-[550px]">
+                    <div className="relative overflow-hidden w-[45vw] h-[70vh] rounded-xl rotate-[-3deg] max-w-[550px] hero-image">
                       <Image
                         src="/images/britt.jpg"
                         alt="Something"
