@@ -18,7 +18,7 @@ export default function Header() {
           <span className="block tracking-tight leading-none md:leading-none xl:leading-none text-sm md:text-lg xl:text-xl mx-auto">
             <div className="flex items-center space-x-[6px] ml-[-55px]">
               <svg className="w-[18px] md:w-[23px] xl:w-[28px] mb-px" viewBox="0 0 35 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M28.401 18.535c2.84-1.868 4.374-4.295 4.374-6.785s-1.534-4.917-4.374-6.785C25.571 3.103 21.58 1.906 17.1 1.906S8.629 3.103 5.799 4.966C2.959 6.832 1.425 9.26 1.425 11.75s1.534 4.917 4.374 6.785c2.83 1.862 6.821 3.059 11.301 3.059s8.471-1.197 11.301-3.06ZM17.1 23c9.444 0 17.1-5.037 17.1-11.25S26.544.5 17.1.5C7.656.5 0 5.537 0 11.75S7.656 23 17.1 23Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M17.1 21.594c3.951 0 7.615-4.12 7.615-9.844 0-5.723-3.664-9.844-7.615-9.844s-7.615 4.12-7.615 9.844c0 5.724 3.664 9.844 7.615 9.844Zm0 1.406c4.97 0 9-5.037 9-11.25S22.07.5 17.1.5s-9 5.037-9 11.25S12.13 23 17.1 23Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M33.3 12.2H.9v-1.8h32.4v1.8Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M16.2 23V1.4H18V23h-1.8Z" fill="#DEE212"/></svg>
-              <span className="block leading-none"><Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />, Los Angeles</span>
+              <span className="block leading-none"><Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />, <span className="hidden md:inline-block">Los Angeles</span><span className="inline-block md:hidden">LA</span></span>
             </div>
           </span>
 
