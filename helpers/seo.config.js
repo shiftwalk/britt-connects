@@ -1,7 +1,7 @@
 export default {
   defaultTitle: 'Connecting Humans | Britt Connects',
   description: 'A simple Next.js starter kit with Tailwind and Framer Motion.',
-  titleTemplate: '%s | Britt Conects',
+  titleTemplate: '%s | Britt Connects',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
