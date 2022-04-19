@@ -1,8 +1,17 @@
-/* @font-face {
-  font-family: 'Example Sans';
-  src: url('../public/fonts/ExampleSans-Regular.woff2') format('woff2'),
-      url('../public/fonts/ExampleSans-Regular.woff') format('woff');
+@font-face {
+  font-family: 'Canela';
+  src: url('../public/fonts/CanelaWeb-Regular.woff2') format('woff2'),
+      url('../public/fonts/CanelaWeb-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-} */
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('../public/fonts/SuisseIntl-Book.woff2') format('woff2'),
+      url('../public/fonts/SuisseIntl-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

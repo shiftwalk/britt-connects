@@ -7,6 +7,7 @@
 
 /* Custom Style Imports */
 @import '_typography.css';
+@import '_scroll.css';
 
 /* Tailwind Utilities */
 @import 'tailwindcss/utilities';
@@ -14,5 +15,5 @@
 
 /* Simple defaults */
 body {
-  @apply font-sans antialiased text-black bg-white;
+  @apply font-sans antialiased text-yellow bg-off-black tracking-tight;
 }
