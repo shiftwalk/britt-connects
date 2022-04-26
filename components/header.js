@@ -23,7 +23,7 @@ export default function Header() {
           </span>
 
           <Link href="/">
-            <a className="block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-lg md:text-2xl xl:text-3xl ml-auto px-2 pt-[3px] pb-[2px] rounded-full border-yellow border hover:bg-yellow hover:text-off-black focus:bg-yellow focus:text-off-black focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow">Bio</a>
+            <a className="block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-lg md:text-2xl xl:text-3xl 2xl:text-4xl ml-auto px-2 2xl:px-3 pt-[3px] pb-[2px] rounded-full border-yellow border hover:bg-yellow hover:text-off-black focus:bg-yellow focus:text-off-black focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow">Bio</a>
           </Link>
         </div>
       </Container>

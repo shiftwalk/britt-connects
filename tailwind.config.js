@@ -25,7 +25,7 @@ module.exports = {
         'yellow': {
           light: '#ffb288',
           DEFAULT: '#DEE212',
-          dark: '#ce8860',
+          dark: '#555418',
         },
       }
     },
