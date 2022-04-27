@@ -27,10 +27,10 @@ export default function Home() {
               <m.div variants={fade}>
                 <section className="h-screen relative p-3 md:p-4 xl:p-6">
                   <Header />
-                  <h1 className="text-[13vw] md:text-[12.4vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]">Connecting Humans</h1>
+                  <h1 className="text-[13vw] md:text-[13.5vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]">Connecting Humans</h1>
 
                   <div className="absolute inset-0 flex items-center justify-center z-0">
-                    <div className="relative overflow-hidden w-[90vw] md:w-[45vw] h-[33vh] md:h-[60vh] rounded-xl rotate-[-3deg] max-w-[560px] hero-image mt-[-15vh] md:mt-0">
+                    <div className="relative overflow-hidden w-[90vw] md:w-[50vw] xl:w-[44vw] 2xl:w-[42vw] h-[33vh] md:h-[50vh] xl:h-[64vh] 2xl:h-[68vh] rounded-xl rotate-[-3deg] max-w-[840px] hero-image mt-[-15vh] md:mt-[4vw] xl:mt-[10vh]">
                       <Image
                         src="/images/britt.jpg"
                         alt="Something"
@@ -40,12 +40,12 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="absolute bottom-0 left-0 p-3 md:p-4 xl:p-6 max-w-[80vw] md:max-w-[36vw] lg:w-[28vw]">
-                    <p className="indent-6 text-base xl:text-lg xl:leading-snug">We connect top-tier talent to high caliber opportunities. That means personal connections over metrics and transactions. We care deeply about our people and will only partner with clients that feel the same. High-quality talent is a critical investment, not an unnecessary expense.</p>
+                  <div className="absolute bottom-0 xl:mb-[12.5vh] left-0 p-3 md:p-4 xl:p-6 max-w-[80vw] md:max-w-[36vw] lg:w-[26vw]">
+                    <p className="indent-9 text-base md:text-lg md:leading-snug xl:text-xl xl:leading-snug 2xl:text-2xl 2xl:leading-snug">Finding the best people is a critical investment, not a luxury. And it happens to be our superpower. We connect top-tier talent with high-caliber opportunities. We care deeply about our talent and partner only with clients who feel the same, meaning we value personal connections over numbers and transactions.</p>
                   </div>
 
-                  <div className="absolute bottom-0 right-0 p-3 md:p-4 xl:p-6 max-w-[70vw] md:max-w-[36vw] lg:w-[28vw] hidden md:block">
-                    <ul className="leading-tight xl:leading-tight text-base xl:text-lg text-right">
+                  <div className="absolute bottom-0 right-0 p-3 md:p-4 xl:p-6 max-w-[70vw] md:max-w-[36vw] lg:w-[28vw] hidden md:block xl:mb-[12.5vh]">
+                    <ul className="leading-tight xl:leading-tight text-base xl:text-lg 2xl:text-xl 2xl:leading-tight text-right">
                       <li><span className="-rotate-90 -mr-1 inline-block">&crarr;</span></li>
                       <li>Creative Directors</li>
                       <li>UX Designers</li>
@@ -59,42 +59,42 @@ export default function Home() {
                   </div>
                 </section>
 
-                <section className="p-3 md:p-4 xl:p-6 pt-[17vw] md:pt-[12vw] xl:pt-[10vw]">
-                  <span className="block mb-4 md:mb-6">(We work with)</span>
+                <section className="p-3 md:p-4 xl:p-6 pt-[17vw] md:pt-[12vw] xl:pt-[4vw]">
+                  <span className="block mb-4 md:mb-6 md:text-lg">(We work with)</span>
 
                   <ul>
                     <li className="text-yellow-dark border-t border-b border-y-yellow-dark pt-3 pb-5 md:py-2 group md:hover:text-off-black">
                       <span className="md:flex items-center block rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-4 md:group-hover:pr-6 md:group-focus:bg-yellow md:group-focus:pl-4 md:group-focus:pr-6 transition-all ease-in-out duration-300">
                         <span className="block uppercase flex-1 font-display text-[10vw] md:text-[7.4vw] leading-[1] pt-2 pb-1 md:pb-0">Agencies</span>
-                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] md:text-right text-base lg:text-lg lg:leading-tight">Traditional ad agencies, digital shops and top production companies</span>
+                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] 2xl:max-w-[300px] md:text-right text-base lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight">Traditional ad agencies, digital shops and top production companies</span>
                       </span>
                     </li>
 
                     <li className="text-yellow-dark border-t border-b border-y-yellow-dark pt-3 pb-5 md:py-2 group md:hover:text-off-black">
                       <span className="md:flex items-center block rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-4 md:group-hover:pr-6 md:group-focus:bg-yellow md:group-focus:pl-4 md:group-focus:pr-6 transition-all ease-in-out duration-300">
                         <span className="block uppercase flex-1 font-display text-[10vw] md:text-[7.4vw] leading-[1] pt-2 pb-1 md:pb-0">Brands</span>
-                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] md:text-right text-base lg:text-lg lg:leading-tight">The biggest players in Search, Social, and Commerce from Silicon Valley to NYC</span>
+                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] 2xl:max-w-[300px] md:text-right text-base lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight">The biggest players in Search, Social, and Commerce from Silicon Valley to NYC</span>
                       </span>
                     </li>
 
                     <li className="text-yellow-dark border-t border-b border-y-yellow-dark pt-3 pb-5 md:py-2 group md:hover:text-off-black">
                       <span className="md:flex items-center block rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-4 md:group-hover:pr-6 md:group-focus:bg-yellow md:group-focus:pl-4 md:group-focus:pr-6 transition-all ease-in-out duration-300">
                         <span className="block uppercase flex-1 font-display text-[10vw] md:text-[7.4vw] leading-[1] pt-2 pb-1 md:pb-0">Startups</span>
-                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] md:text-right text-base lg:text-lg lg:leading-tight">Well-funded, pre-seed, on a napkin sketch, we're here to help build your perfect team</span>
+                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] 2xl:max-w-[300px] md:text-right text-base lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight">Well-funded, pre-seed, on a napkin sketch, we're here to help build your perfect team</span>
                       </span>
                     </li>
 
                     <li className="text-yellow-dark border-t border-b border-y-yellow-dark pt-3 pb-5 md:py-2 group md:hover:text-off-black">
                       <span className="md:flex items-center block rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-4 md:group-hover:pr-6 md:group-focus:bg-yellow md:group-focus:pl-4 md:group-focus:pr-6 transition-all ease-in-out duration-300">
                         <span className="block uppercase flex-1 font-display text-[10vw] md:text-[7.4vw] leading-[1] pt-2 pb-1 md:pb-0">Technology</span>
-                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] md:text-right text-base lg:text-lg lg:leading-tight">Innovators from fashion to spirits, entertainment to hospitality and everything in between</span>
+                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] 2xl:max-w-[300px] md:text-right text-base lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight">Innovators from fashion to spirits, entertainment to hospitality and everything in between</span>
                       </span>
                     </li>
 
                     <li className="text-yellow-dark border-t border-b border-y-yellow-dark pt-3 pb-5 md:py-2 group md:hover:text-off-black">
                       <span className="md:flex items-center block rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-4 md:group-hover:pr-6 md:group-focus:bg-yellow md:group-focus:pl-4 md:group-focus:pr-6 transition-all ease-in-out duration-300">
                         <span className="block uppercase flex-1 font-display text-[10vw] md:text-[7.4vw] leading-[1] pt-2 pb-1 md:pb-0">Humans</span>
-                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] md:text-right text-base lg:text-lg lg:leading-tight">From fashion to spirits, entertainment to hospitality and everything in between</span>
+                        <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] 2xl:max-w-[300px] md:text-right text-base lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight">From fashion to spirits, entertainment to hospitality and everything in between</span>
                       </span>
                     </li>
                   </ul>
@@ -103,12 +103,12 @@ export default function Home() {
                 <section className="p-3 md:p-4 xl:p-6 pt-[17vw] md:pt-[12vw] xl:pt-[10vw]">
                   <div className="grid grid-cols-12 gap-6">
                     <div className="col-span-12 md:col-span-3 xl:col-span-2">
-                      <span className="block mb-4 md:mb-6">(Ethos &amp; Clients)</span>
+                      <span className="block mb-4 md:mb-6 md:text-lg">(Ethos &amp; Clients)</span>
                     </div>
                     <div className="col-span-6 md:col-span-4 content md:text-lg md:leading-tight max-w-[500px]">
-                      <p className="indent-6">People are what truly drive creativity, innovation and every successful company’s trajectory. There simply is no shortcut for a company’s success — assembling the right mix of minds is bar none the smartest goal any team can have. Attracting the right talent today is as much of an art as it is a science.</p>
+                      <p className="indent-9 text-base md:text-lg md:leading-snug xl:text-xl xl:leading-snug 2xl:text-2xl 2xl:leading-snug">People are what truly drive creativity, innovation and every successful company’s trajectory. There simply is no shortcut for a company’s success — assembling the right mix of minds is bar none the smartest goal any team can have. Attracting the right talent today is as much of an art as it is a science.</p>
                       
-                      <p>People are rethinking what matters, and time and again we hear that their top job search criteria are their own sense of personal fulfillment and who they’ll be working with. We know, because we listen.</p>
+                      <p className="text-base md:text-lg md:leading-snug xl:text-xl xl:leading-snug 2xl:text-2xl 2xl:leading-snug">People are rethinking what matters, and time and again we hear that their top job search criteria are their own sense of personal fulfillment and who they’ll be working with. We know, because we listen.</p>
                     </div>
 
                     <div className="col-span-3 xl:col-span-4 col-start-10 xl:col-start-10 max-w-[300px] ml-auto">
@@ -132,78 +132,131 @@ export default function Home() {
                 <section className="p-3 md:p-4 xl:p-6 pt-[17vw] md:pt-[12vw] xl:pt-[10vw]">
                   <h2 className="text-[14vw] md:text-[8.4vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]">Roles Filled <span className="text-xl md:text-2xl font-sans align-top hidden md:inline-block md:-ml-6 md:-mt-6">(42)</span></h2>
 
-                  <ul className="pt-[12vw] md:pt-[8vw] xl:pt-[6vw]">
-                    <li className="text-yellow-dark border-t border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
-                      <span className="flex flex-wrap items-center rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-3 md:group-hover:pr-3 md:group-focus:bg-yellow md:group-focus:pl-3 md:group-focus:pr-3 transition-all ease-in-out duration-300">
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Managing Director</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Leadership</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Ad Agency</span>
-                        <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight ml-auto">2022</span>
-                      </span>
-                    </li>
+                  <div className="relative">
+                    <ul className="pt-[12vw] md:pt-[8vw] xl:pt-[6vw]">
+                      <li className="text-yellow-dark border-t border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Managing Director</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Leadership</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Ad Agency</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
 
-                    <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
-                      <span className="flex flex-wrap items-center rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-3 md:group-hover:pr-3 md:group-focus:bg-yellow md:group-focus:pl-3 md:group-focus:pr-3 transition-all ease-in-out duration-300">
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">3D Designer</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Management</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Design Studio</span>
-                        <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight ml-auto">2022</span>
-                      </span>
-                    </li>
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">3D Designer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Management</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Design Studio</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
 
-                    <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
-                      <span className="flex flex-wrap items-center rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-3 md:group-hover:pr-3 md:group-focus:bg-yellow md:group-focus:pl-3 md:group-focus:pr-3 transition-all ease-in-out duration-300">
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Front-End Developer</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Team</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Tech Startup</span>
-                        <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight ml-auto">2022</span>
-                      </span>
-                    </li>
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Front-End Developer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Team</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Tech Startup</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
 
-                    <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
-                      <span className="flex flex-wrap items-center rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-3 md:group-hover:pr-3 md:group-focus:bg-yellow md:group-focus:pl-3 md:group-focus:pr-3 transition-all ease-in-out duration-300">
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Motion Designer</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Management</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Motion House</span>
-                        <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight ml-auto">2022</span>
-                      </span>
-                    </li>
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Motion Designer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Management</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Motion House</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
 
-                    <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
-                      <span className="flex flex-wrap items-center rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-3 md:group-hover:pr-3 md:group-focus:bg-yellow md:group-focus:pl-3 md:group-focus:pr-3 transition-all ease-in-out duration-300">
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">UI Designer</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Team</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">MediaMonks</span>
-                        <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight ml-auto">2022</span>
-                      </span>
-                    </li>
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">UI Designer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Team</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">MediaMonks</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
 
-                    <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
-                      <span className="flex flex-wrap items-center rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-3 md:group-hover:pr-3 md:group-focus:bg-yellow md:group-focus:pl-3 md:group-focus:pr-3 transition-all ease-in-out duration-300">
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Producer</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Management</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Fashion House</span>
-                        <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight ml-auto">2022</span>
-                      </span>
-                    </li>
-                    
-                    <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
-                      <span className="flex flex-wrap items-center rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-3 md:group-hover:pr-3 md:group-focus:bg-yellow md:group-focus:pl-3 md:group-focus:pr-3 transition-all ease-in-out duration-300">
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Graphic Designer</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Team</span>
-                        <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight">Startup</span>
-                        <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl leading-right md:leading-tight ml-auto">2022</span>
-                      </span>
-                    </li>
-                  </ul>
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Producer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Management</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Fashion House</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
+                      
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Graphic Designer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Team</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Startup</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
+
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Motion Designer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Management</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Motion House</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
+
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">UI Designer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Team</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">MediaMonks</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
+
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Producer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Management</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Fashion House</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
+
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">3D Designer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Management</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Design Studio</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
+
+                      <li className="text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black">
+                        <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Front-End Developer</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Team</span>
+                          <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">Tech Startup</span>
+                          <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">2022</span>
+                        </span>
+                      </li>
+                    </ul>
+
+                    <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-off-black to-transparent z-10 pointer-events-none"></div>
+                  </div>
                 </section>
 
                 <section className="p-3 md:p-4 xl:p-6 pt-[20vw] md:pt-[16vw] xl:pt-[16vw]">
                   <div className="relative flex justify-center">
                     <div className="px-[3vw] md:px-[10vw] flex flex-wrap items-center justify-center">
                       <div className="w-full">
-                        <span className="block mx-auto text-center mb-6 md:mb-12">(Kind words)</span>
+                        <span className="block mx-auto text-center mb-6 md:mb-12 md:text-lg">(Kind words)</span>
                         <h3 className="text-[9vw] md:text-[5.6vw] font-display uppercase leading-[0.92] md:leading-[0.92] text-center relative z-10 mix-blend-lighten w-full mb-12 md:mb-12">“Britt has an incredible knack of reading between the lines to find perfect candidates”</h3>
+                        
+                        <span className="block w-10 md:w-12 xl:w-14 mx-auto text-center mb-3 md:mb-4 xl:mb-5">
+                          <svg className="w-full" viewBox="0 0 60 83" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m59.383 53.803.013.001c.203-4.613.784-20.353-.255-29.166-.299-2.555-2.21-5.651-4.63-9.572-1.944-3.153-4.147-6.729-5.704-10.444-1.245-2.968-3.334-4.33-5.585-3.635-2.515.774-4.783 4.117-5.339 8.916-2.225-3.216-3.835-3.439-5.639-2.407-2.549 1.457-4.04 6.46-2.121 12.312.91 2.779 2.58 4.506 4.049 6.028 1.105 1.144 2.058 2.132 2.439 3.302l.358 1.168A323.8 323.8 0 0 0 33.9 28.33c-2.244-1.432-3.911-2.133-5.409-2.28-2.026-.2-3.572.62-5.527 1.66-2.455 1.302-5.814 3.085-12.34 4.2-1.94.33-3.353 1.225-4.08 2.592-.727 1.365-.728 3.076-.004 5.09l.02.053c-5.779.959-3.846 8.71-5.394 15.925-.407 1.892-.806 3.363.21 5.483C7.724 74.29 16.226 80.509 29.803 81.846c5.426.534 9.267.77 13.078-.756 4.76-1.901 14.068-12.987 16.114-22.534.362-1.679.481-3.266.387-4.753ZM42.067 5.26c1.313-3.165 3.967-2.603 4.889-.321 1.592 3.943 3.856 7.948 5.855 11.188 2.058 3.332 4.135 6.715 4.362 8.633.72 6.11.379 17.002.199 23.692-2.118-3.645-6.117-7.264-8.835-9.583-.174-2.673-.545-7.34-1.316-13.603-.511-4.19-4.875-7.03-5.608-12.88-.337-2.71-.331-5.232.454-7.126Zm-9.558 12.177c-.538-1.504-.82-7.013 1.171-8.334 1.853-1.23 3.014 1.642 4.067 3.924.245 4.033 2.164 7.789 3.554 9.96 1.083 1.692 2.018 3.15 2.19 4.754.214 1.981.46 5.221.63 7.58a112.537 112.537 0 0 0-3.204-2.336 144.998 144.998 0 0 0-2.606-8.018c-.926-2.62-4.495-3.876-5.802-7.53Zm8.823 59.44c-3.391 1.36-6.761 1.178-12.052.657C17.244 76.349 5.837 68.69 2.856 59.207c-.507-1.609.29-3.744.534-6.663.586-6.987 1.09-11.104 4.361-10.782 1.57.154 6.186 4.733 5.315 15.115l11.435 6.998c3.802-3.517 14.202-8.617 14.202-8.617-1.376-2.293-.024-8.312-.024-8.312-3.222-.775-9.859-5.013-11.832-10.22-3.29 2.544-17.907 6.446-18.26-.337-.105-2.008 1.598-2.544 2.26-2.657 6.905-1.178 10.344-2.979 12.796-4.28 1.786-.95 3.463-1.721 4.782-1.592 1.105.11 2.766.876 4.67 2.094 5.413 3.45 14.449 8.931 22.159 17.689.718.817 1.574 2.539 1.803 3.614 2.062 9.724-11.015 23.727-15.725 25.62Zm-5.34-21.767c-2.38 1.076-7.952 3.738-11.396 6.548l-8.306-7.02c.436-5.207-.293-9.076-1.613-11.662 3.883.111 8.75-.512 11.291-1.677 1.55 2.1 5.537 6.918 10.238 8.083-.305 1.495-.616 3.785-.213 5.728Z" fill="#DEE212"/></svg>
+                        </span>
                         <span className="block mx-auto text-center uppercase text-lg leading-tight md:text-xl md:leading-tight">Kelly Wu<span className="block">Recruiting Lead, Google</span></span>
                       </div>
                     </div>
@@ -221,17 +274,17 @@ export default function Home() {
 
                   <div className="flex flex-wrap mb-[3vw]">
                     <div className="w-full md:w-1/2 flex justify-center border-b md:border-b-0 md:border-r border-yellow">
-                      <div className="max-w-[300px] text-center py-[5vw]">
+                      <div className="max-w-[420px] text-center py-[10vw] md:py-[5vw]">
                         <a href="#" className="inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-2 2xl:px-3 pt-[3px] pb-[2px] rounded-full border-yellow border hover:bg-yellow hover:text-off-black focus:bg-yellow focus:text-off-black focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow mb-8">Clients</a>
 
-                        <p className="">High-quality talent is your secret to success, not an arbitrary expense. We’re here to ensure that your investment has the greatest ROI based on your company’s needs and culture.</p>
+                        <p className="md:text-lg md:leading-snug">High-quality talent is your secret to success, not an arbitrary expense. We’re here to ensure that your investment has the greatest ROI based on your company’s needs and culture.</p>
                       </div>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center">
-                      <div className="max-w-[300px] text-center py-[5vw]">
-                        <a href="#" className="inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-2 2xl:px-4 pt-[3px] pb-[2px] rounded-full border-yellow border hover:bg-yellow hover:text-off-black focus:bg-yellow focus:text-off-black focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow mb-8">Talent</a>
+                      <div className="max-w-[420px] text-center py-[10vw] md:py-[5vw]">
+                        <a href="#" className="inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] pb-[2px] rounded-full border-yellow border hover:bg-yellow hover:text-off-black focus:bg-yellow focus:text-off-black focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow mb-8">Talent</a>
 
-                        <p className="">High-quality talent is your secret to success, not an arbitrary expense. We’re here to ensure that your investment has the greatest ROI based on your company’s needs and culture.</p>
+                        <p className="md:text-lg md:leading-snug">High-quality talent is your secret to success, not an arbitrary expense. We’re here to ensure that your investment has the greatest ROI based on your company’s needs and culture.</p>
                       </div>
                     </div>
                   </div>

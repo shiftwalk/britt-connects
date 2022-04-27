@@ -21,3 +21,7 @@ body {
 .hero-image img {
   @apply bg-blend-lighten opacity-90 !important;
 }
+
+.hyphens {
+  hyphens: manual;
+}
