@@ -26,6 +26,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "embla-carousel-react": "^6.2.0",
     "framer-motion": "^4.1.17",
     "locomotive-scroll": "^4.1.4",
     "moment-timezone": "^0.5.34",
