@@ -36,7 +36,7 @@ export default function Home() {
                         src="/images/britt.jpg"
                         alt="Something"
                         layout="fill"
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-center will-change-transform"
                       />
                     </div>
                   </div>
