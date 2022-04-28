@@ -31,16 +31,18 @@ body {
   to { transform: rotate(359deg); }
 }
 
+@keyframes spinBack {
+  from { transform: rotate(359deg); }
+  to { transform: rotate(0deg); }
+}
+
 .spin {
   animation: spin 30s linear infinite;
 }
 
-
-
-
-
-
-
+.spin-backwards {
+  animation: spinBack 30s linear infinite;
+}
 
 .embla {
   @apply relative mx-auto;
@@ -126,4 +128,50 @@ body {
   & > p:first-of-type {
     @apply indent-9;
   }
+}
+
+
+
+.intro-fade-out {
+  animation: fadeOutScale 0.44s cubic-bezier(0.77,0,0.18,1) forwards;
+  animation-delay: 4.8s;
+}
+
+circle {
+  @apply stroke-off-black;
+  fill: none;
+  stroke-width: 100%;
+  stroke-dasharray: 315; /* equal to circumference of circle 2 * 3.14 * 50 */
+  animation: wipe 5s cubic-bezier(0.77,0,0.18,1) forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes wipe {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30%, 50% {
+    stroke-dashoffset: -314.4;
+  }
+  80%, 100% {
+    stroke-dashoffset: -630;
+  } 
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }  
+}
+
+@keyframes fadeOutScale {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }  
 }

@@ -194,7 +194,7 @@ export default function Home(initialData) {
                 </section>
                 
                 <section className="p-3 md:p-4 xl:p-6 pt-[17vw] md:pt-[12vw] xl:pt-[10vw]">
-                  <h2 className="text-[14vw] md:text-[8.4vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]">Roles Filled <span className="text-xl md:text-2xl font-sans align-top hidden md:inline-block md:-ml-6 md:-mt-6">(42)</span></h2>
+                  <h2 className="text-[14vw] md:text-[8.4vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]">Roles Filled <span className="text-xl md:text-2xl font-sans align-top hidden md:inline-block md:-ml-6 md:-mt-6">({home.rolesFilled.length})</span></h2>
 
                   <div className="relative mb-5 md:mb-6 xl:mb-8">
                     <ul className="pt-[12vw] md:pt-[8vw] xl:pt-[6vw]">
