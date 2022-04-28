@@ -26,11 +26,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^3.2.0",
     "embla-carousel-react": "^6.2.0",
     "framer-motion": "^4.1.17",
     "locomotive-scroll": "^4.1.4",
     "moment-timezone": "^0.5.34",
     "next": "^12.0.8",
+    "next-sanity": "^0.5.1",
+    "next-sanity-image": "^3.2.1",
     "next-seo": "^4.26.0",
     "postcss-import": "^14.0.0",
     "postcss-nested": "^5.0.5",
