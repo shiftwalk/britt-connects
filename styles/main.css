@@ -16,7 +16,15 @@
 /* Simple defaults */
 body {
   @apply font-sans antialiased text-yellow bg-off-black tracking-tight selection:bg-yellow selection:text-off-black;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
+
 
 .hero-image img {
   @apply bg-blend-lighten opacity-90 !important;
@@ -134,7 +142,7 @@ body {
 
 .intro-fade-out {
   animation: fadeOutScale 0.44s cubic-bezier(0.77,0,0.18,1) forwards;
-  animation-delay: 4.8s;
+  animation-delay: 3.5s;
 }
 
 circle {
@@ -142,7 +150,7 @@ circle {
   fill: none;
   stroke-width: 100%;
   stroke-dasharray: 315; /* equal to circumference of circle 2 * 3.14 * 50 */
-  animation: wipe 5s cubic-bezier(0.77,0,0.18,1) forwards;
+  animation: wipe 3s cubic-bezier(0.77,0,0.18,1) forwards reverse;
   animation-delay: 0.5s;
 }
 
@@ -150,11 +158,11 @@ circle {
   0% {
     stroke-dashoffset: 0;
   }
-  30%, 50% {
-    stroke-dashoffset: -314.4;
+  50% {
+    stroke-dashoffset: 314.4;
   }
-  80%, 100% {
-    stroke-dashoffset: -630;
+  100% {
+    stroke-dashoffset: 630;
   } 
 }
 

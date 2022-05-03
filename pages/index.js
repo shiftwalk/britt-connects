@@ -3,7 +3,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Container from '@/components/container'
 import FancyLink from '@/components/fancyLink'
-import { fade } from '@/helpers/transitions'
+import { fade, reveal, revealOut, scale } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import SmoothWrapper from '@/components/smooth-wrapper'
 import { NextSeo } from 'next-seo'
@@ -110,42 +110,57 @@ export default function Home(initialData) {
               <m.div variants={fade}>
                 <section className="h-screen relative p-3 md:p-4 xl:p-6">
                   <Header bioImage={home.bioImage} bioHeading={home.bioHeading} bioText={home.bioText} />
-                  <h1 className="text-[13vw] md:text-[13.5vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]" data-scroll data-scroll-speed={0.4}>Connecting Humans</h1>
+                  <m.h1 initial="initial" animate="enter" exit="exit" variants={{ enter: { transition: { staggerChildren: 0.03 }}}} className="text-[13vw] md:text-[13.5vw] font-display uppercase leading-[1] md:leading-[1] text-center relative z-10 mix-blend-lighten pt-[2vw]" data-scroll data-scroll-speed={0.4}>
+                    <span className="block overflow-hidden relative">
+                      <m.span className="block mb-[-1.5vw]" variants={reveal}>Connecting</m.span>
+                    </span>
+                    <span className="block overflow-hidden relative">
+                      <m.span className="block mb-[-1.5vw]" variants={reveal}>Humans</m.span>
+                    </span>
+                  </m.h1>
 
                   <div className="absolute inset-0 flex items-center justify-center z-0" data-scroll data-scroll-speed={-0.55}>
                     <div className="relative overflow-hidden w-[88vw] md:w-[50vw] lg:w-[45vw] xl:w-[44vw] 2xl:w-[42vw] h-[33vh] md:h-[50vh] lg:h-[80vh] xl:h-[80vh] 2xl:h-[77vh] rounded-xl rotate-[-3deg] max-w-[840px] hero-image mt-[-15vh] md:mt-[4vw] lg:mt-[24vh] xl:mt-[26vh] 2xl:mt-[30vh]">
-                      <Image
-                        src={home.heroImage.asset.url}
-                        alt="Something"
-                        layout="fill"
-                        className="w-full h-full object-cover object-center will-change-transform"
-                      />
+                      <m.div variants={revealOut} className="absolute inset-0 bg-yellow-dark z-50"></m.div>
+
+                      <m.div variants={scale} className="w-full h-full">
+                        <Image
+                          src={home.heroImage.asset.url}
+                          alt="Something"
+                          layout="fill"
+                          className="w-full h-full object-cover object-center will-change-transform"
+                        />
+                      </m.div>
                     </div>
                   </div>
 
                   <div className="absolute bottom-0 left-0 p-3 md:p-4 xl:p-6 max-w-[80vw] md:max-w-[36vw] lg:w-[26vw]">
                     <p className="indent-9 text-base lg:text-lg lg:leading-snug xl:text-xl xl:leading-snug 2xl:text-2xl 2xl:leading-snug">{home.heroText}.</p>
 
-                    <ul className="leading-tight xl:leading-tight text-sm xl:text-lg 2xl:text-xl 2xl:leading-tight flex flex-wrap md:hidden mt-5">
+                    <m.ul initial="initial" animate="enter" exit="exit" variants={{ enter: { transition: { staggerChildren: 0.03 }}}} className="leading-tight xl:leading-tight text-sm xl:text-lg 2xl:text-xl 2xl:leading-tight flex flex-wrap md:hidden mt-5">
                       <li className="w-full mb-1"><span className="-rotate-90 -mr-1 inline-block">&crarr;</span></li>
 
                       {home.heroServices.map((e, i) => {
                         return (
-                          <li className="w-1/2" key={i}>{e}</li>
+                          <li className="w-1/2 overflow-hidden relative" key={i}>
+                            <m.span variants={reveal} className="block">{e}</m.span>
+                          </li>
                         )
                       })}
-                    </ul>
+                    </m.ul>
                   </div>
 
                   <div className="absolute bottom-0 right-0 p-3 md:p-4 xl:p-6 max-w-[70vw] md:max-w-[36vw] lg:w-[28vw] hidden md:block">
-                    <ul className="leading-tight xl:leading-tight text-base xl:text-lg 2xl:text-xl 2xl:leading-tight text-right">
+                    <m.ul initial="initial" animate="enter" exit="exit" variants={{ enter: { transition: { staggerChildren: 0.03 }}}} className="leading-tight xl:leading-tight text-base xl:text-lg 2xl:text-xl 2xl:leading-tight text-right">
                       <li><span className="-rotate-90 -mr-1 inline-block">&crarr;</span></li>
                       {home.heroServices.map((e, i) => {
                         return (
-                          <li key={i}>{e}</li>
+                          <li key={i} className="relative overflow-hidden">
+                            <m.span variants={reveal} className="block">{e}</m.span>
+                          </li>
                         )
                       })}
-                    </ul>
+                    </m.ul>
                   </div>
                 </section>
 
