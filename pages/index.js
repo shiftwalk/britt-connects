@@ -11,7 +11,8 @@ import Image from 'next/image'
 import Carousel from '@/components/carousel'
 import SanityPageService from '@/services/sanityPageService'
 import BlockContent from '@sanity/block-content-to-react'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { BioContext } from '../context/bio'
 
 const query = `{
   "home": *[_type == "home"][0]{
@@ -94,6 +95,7 @@ const pageService = new SanityPageService(query)
 export default function Home(initialData) {
   const { data: { home, contact } } = pageService.getPreviewHook(initialData)()
   const [workExpanded, setWorkExpanded] = useState(false)
+  const [bioContext, setBioContext] = useContext(BioContext);
 
   const ToggleWork = () => {
     setWorkExpanded(!workExpanded)
@@ -101,10 +103,11 @@ export default function Home(initialData) {
 
   return (
     <Layout>
+      <div className="fixed-target" id="fixed-global"></div>
       <NextSeo title={home.title} />
       
       <LazyMotion features={domAnimation}>
-        <div className="">
+        <div className={`transition-translate ease-[cubic-bezier(0.77,0,0.18,1)] duration-[850ms] delay-0 ${bioContext ? 'md:translate-x-[-10%]' : 'md:translate-x-[0]' }`}>
           <SmoothWrapper>
             
             <m.main
@@ -114,8 +117,9 @@ export default function Home(initialData) {
               className="mb-12 md:mb-16 xl:mb-24"
             >
               <m.div variants={fade}>
+                <Header bioImage={home.bioImage} bioHeading={home.bioHeading} bioText={home.bioText} bioContext={bioContext} />
+                
                 <section className="h-screen relative p-3 md:p-4 xl:p-6">
-                  <Header bioImage={home.bioImage} bioHeading={home.bioHeading} bioText={home.bioText} />
                   <m.h1 initial="initial" animate="enter" exit="exit" variants={{ enter: { transition: { staggerChildren: 0.03 }}}} className="text-[13vw] md:text-[13.5vw] font-display uppercase leading-[1] md:leading-[1] text-center relative z-10 mix-blend-lighten pt-[2vw]" data-scroll data-scroll-speed={0.4}>
                     <span className="block overflow-hidden relative">
                       <m.span className="block mb-[-1.5vw]" variants={reveal}>Connecting</m.span>
@@ -176,8 +180,8 @@ export default function Home(initialData) {
                   <ul className="fancy-nav">
                     {home.weWorkWith.map((e, i) => {
                       return (
-                        <li className={`text-yellow border-b border-y-yellow-dark pt-3 pb-5 md:py-2 fancy-nav__item group relative md:hover:text-off-black ${i == 0 && 'border-t'}`} key={i}>
-                          <span className="block rounded-xl md:group-hover:bg-yellow md:group-focus:bg-yellow absolute inset-0 z-0 fancy-nav__item-inner my-2">
+                        <li className={`text-yellow border-b border-y-yellow-dark pt-3 pb-5 md:py-2 fancy-nav__item group md:hover:text-off-black relative overflow-hidden ${i == 0 && 'border-t'}`} key={i}>
+                          <span className="block rounded-xl bg-yellow h-0 md:group-hover:h-[92%] absolute bottom-0 left-0 right-0 z-0 fancy-nav__item-inner my-2">
                           </span>
                           
                           <span className="relative z-10 block md:flex items-center md:py-2 md:group-hover:pl-4 md:group-hover:pr-6 md:group-focus:pl-4 md:group-focus:pr-6 fancy-nav__item-inner-inner">
@@ -191,8 +195,8 @@ export default function Home(initialData) {
                 </section>
 
                 <section className="p-3 md:p-4 xl:p-6 pt-[17vw] md:pt-[12vw] xl:pt-[10vw]">
-                  <div className="grid grid-cols-12 gap-6">
-                    <div className="col-span-12 md:col-span-3 xl:col-span-2">
+                  <div className="grid grid-cols-8 md:grid-cols-12 gap-6">
+                    <div className="col-span-8 md:col-span-3 xl:col-span-2">
                       <span className="block mb-4 md:mb-6 md:text-lg">(Ethos &amp; Clients)</span>
                     </div>
                     <div className="col-span-6 md:col-span-4 content md:text-lg md:leading-tight max-w-[500px]">
@@ -220,12 +224,14 @@ export default function Home(initialData) {
                 <section className="p-3 md:p-4 xl:p-6 pt-[17vw] md:pt-[12vw] xl:pt-[10vw]">
                   <h2 className="text-[14vw] md:text-[8.4vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]">Roles Filled <span className="text-xl md:text-2xl font-sans align-top hidden md:inline-block md:-ml-6 md:-mt-6">({home.rolesFilled.length})</span></h2>
 
-                  <div className="relative mb-5 md:mb-6 xl:mb-8">
+                  <div className="relative mb-5 md:mb-6 xl:mb-8 fancy-nav">
                     <ul className="mt-[12vw] md:mt-[8vw] xl:mt-[6vw] fancy-nav">
                       {home.rolesFilled.slice(0, workExpanded ? Infinity : 4).map((e, i) => {
                         return (
-                          <li className={`text-yellow border-b border-y-yellow-dark pt-3 pb-5 md:py-2 fancy-nav__item group relative md:hover:text-off-black ${i == 0 && 'border-t'} ${i == 0 && 'border-t'}`} key={i}>
-                            <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
+                          <li className={`text-yellow border-b border-y-yellow-dark pt-3 pb-5 md:py-2 fancy-nav__item group md:hover:text-off-black relative overflow-hidden ${i == 0 && 'border-t'} ${i == 0 && 'border-t'}`} key={i}>
+                            <span className="block rounded-xl bg-yellow h-0 md:group-hover:h-[83%] absolute bottom-0 left-0 right-0 z-0 fancy-nav__item-inner my-2"></span>
+                            
+                            <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:pl-5 relative z-10 md:group-focus:pr-5 transition-all ease-in-out duration-300">
                               <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">{e.title}</span>
                               <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">{e.type}</span>
                               <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">{e.client}</span>
@@ -236,7 +242,7 @@ export default function Home(initialData) {
                       })}
                     </ul>
 
-                    <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-off-black to-transparent z-10 pointer-events-none opacity-75"></div>
+                    <div className="fancy-nav__shadow absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-off-black to-transparent z-10 pointer-events-none"></div>
                   </div>
 
                   <button onClick={ToggleWork} className="md:text-xl xl:text-2xl text-right ml-auto block focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow">{workExpanded ? '- Hide' : '+ Load More'}</button>

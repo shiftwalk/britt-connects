@@ -189,6 +189,14 @@ circle {
   &:hover .fancy-nav__item {
     @apply md:text-yellow-dark;
   }
+
+  &:hover .fancy-nav__shadow {
+    @apply opacity-0
+  }
+}
+
+.fancy-nav__shadow {
+  @apply transition-opacity ease-in-out duration-300 opacity-80;
 }
 
 .fancy-nav__item {
