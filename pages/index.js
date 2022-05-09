@@ -11,6 +11,7 @@ import Image from 'next/image'
 import Carousel from '@/components/carousel'
 import SanityPageService from '@/services/sanityPageService'
 import BlockContent from '@sanity/block-content-to-react'
+import { useState } from 'react'
 
 const query = `{
   "home": *[_type == "home"][0]{
@@ -92,6 +93,11 @@ const pageService = new SanityPageService(query)
 
 export default function Home(initialData) {
   const { data: { home, contact } } = pageService.getPreviewHook(initialData)()
+  const [workExpanded, setWorkExpanded] = useState(false)
+
+  const ToggleWork = () => {
+    setWorkExpanded(!workExpanded)
+  }
 
   return (
     <Layout>
@@ -216,7 +222,7 @@ export default function Home(initialData) {
 
                   <div className="relative mb-5 md:mb-6 xl:mb-8">
                     <ul className="mt-[12vw] md:mt-[8vw] xl:mt-[6vw] fancy-nav">
-                      {home.rolesFilled.map((e, i) => {
+                      {home.rolesFilled.slice(0, workExpanded ? Infinity : 4).map((e, i) => {
                         return (
                           <li className={`text-yellow border-b border-y-yellow-dark pt-3 pb-5 md:py-2 fancy-nav__item group relative md:hover:text-off-black ${i == 0 && 'border-t'} ${i == 0 && 'border-t'}`} key={i}>
                             <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
@@ -233,7 +239,7 @@ export default function Home(initialData) {
                     <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-off-black to-transparent z-10 pointer-events-none opacity-75"></div>
                   </div>
 
-                  <button className="md:text-xl xl:text-2xl text-right ml-auto block focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow">+ Load More</button>
+                  <button onClick={ToggleWork} className="md:text-xl xl:text-2xl text-right ml-auto block focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow">{workExpanded ? '- Hide' : '+ Load More'}</button>
                 </section>
 
                 <section className="p-3 md:p-4 xl:p-6 pt-[18vw] md:pt-[13vw] xl:pt-[12vw]">
