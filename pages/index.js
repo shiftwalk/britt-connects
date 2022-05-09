@@ -167,11 +167,14 @@ export default function Home(initialData) {
                 <section className="p-3 md:p-4 xl:p-6 pt-[14vw] md:pt-[16vw] xl:pt-[15vw]">
                   <span className="block mb-4 md:mb-6 md:text-lg">(We work with)</span>
 
-                  <ul>
+                  <ul className="fancy-nav">
                     {home.weWorkWith.map((e, i) => {
                       return (
-                        <li className={`text-yellow-dark border-b border-y-yellow-dark pt-3 pb-5 md:py-2 group md:hover:text-off-black ${i == 0 && 'border-t'}`} key={i}>
-                          <span className="md:flex items-center block rounded-xl md:py-2 md:group-hover:bg-yellow md:group-hover:pl-4 md:group-hover:pr-6 md:group-focus:bg-yellow md:group-focus:pl-4 md:group-focus:pr-6 transition-all ease-in-out duration-300">
+                        <li className={`text-yellow border-b border-y-yellow-dark pt-3 pb-5 md:py-2 fancy-nav__item group relative md:hover:text-off-black ${i == 0 && 'border-t'}`} key={i}>
+                          <span className="block rounded-xl md:group-hover:bg-yellow md:group-focus:bg-yellow absolute inset-0 z-0 fancy-nav__item-inner my-2">
+                          </span>
+                          
+                          <span className="relative z-10 block md:flex items-center md:py-2 md:group-hover:pl-4 md:group-hover:pr-6 md:group-focus:pl-4 md:group-focus:pr-6 fancy-nav__item-inner-inner">
                             <span className="block uppercase flex-1 font-display text-[10vw] md:text-[7.4vw] leading-[1] pt-2 pb-1 md:pb-0">{e.title}</span>
                             <span className="block md:ml-auto max-w-[300px] md:max-w-[240px] 2xl:max-w-[300px] md:text-right text-base lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight">{e.text}</span>
                           </span>
@@ -212,22 +215,10 @@ export default function Home(initialData) {
                   <h2 className="text-[14vw] md:text-[8.4vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]">Roles Filled <span className="text-xl md:text-2xl font-sans align-top hidden md:inline-block md:-ml-6 md:-mt-6">({home.rolesFilled.length})</span></h2>
 
                   <div className="relative mb-5 md:mb-6 xl:mb-8">
-                    <ul className="pt-[12vw] md:pt-[8vw] xl:pt-[6vw]">
+                    <ul className="mt-[12vw] md:mt-[8vw] xl:mt-[6vw] fancy-nav">
                       {home.rolesFilled.map((e, i) => {
                         return (
-                          <li className={`text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black ${i == 0 && 'border-t'}`} key={i}>
-                            <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
-                              <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">{e.title}</span>
-                              <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">{e.type}</span>
-                              <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">{e.client}</span>
-                              <span className="block w-1/2 md:w-auto text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight ml-auto">{e.year}</span>
-                            </span>
-                          </li>
-                        )
-                      })}
-                      {home.rolesFilled.map((e, i) => {
-                        return (
-                          <li className={`text-yellow-dark border-b border-y-yellow-dark py-2 group md:hover:text-off-black`} key={i}>
+                          <li className={`text-yellow border-b border-y-yellow-dark pt-3 pb-5 md:py-2 fancy-nav__item group relative md:hover:text-off-black ${i == 0 && 'border-t'} ${i == 0 && 'border-t'}`} key={i}>
                             <span className="flex flex-wrap items-center rounded-xl md:py-3 2xl:py-4 md:group-hover:bg-yellow md:group-hover:pl-5 md:group-hover:pr-5 md:group-focus:bg-yellow md:group-focus:pl-5 md:group-focus:pr-5 transition-all ease-in-out duration-300">
                               <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">{e.title}</span>
                               <span className="block w-1/2 md:flex-1 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl leading-right md:leading-tight">{e.type}</span>
@@ -273,14 +264,24 @@ export default function Home(initialData) {
                   <div className="flex flex-wrap mb-[3vw]">
                     <div className="w-full md:w-1/2 flex justify-center border-b md:border-b-0 md:border-r border-yellow">
                       <div className="max-w-[420px] text-center py-[10vw] md:py-[5vw]">
-                        <a href={`mailto:${contact.clientsEmailAddress}`} className="inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-2 2xl:px-3 pt-[3px] pb-[2px] rounded-full border-yellow border hover:bg-yellow hover:text-off-black focus:bg-yellow focus:text-off-black focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow mb-8">Clients</a>
+                        <a href={`mailto:${contact.clientsEmailAddress}`} className="inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] pb-[2px] rounded-full border-yellow border  focus:text-yellow focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow mb-8 overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 relative">
+                          <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
+                          <span className="block overflow-hidden relative z-[10]">
+                            <span>Clients</span>
+                          </span>
+                        </a>
 
                         <p className="md:text-lg md:leading-snug">{home.getStartedClientsText}</p>
                       </div>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center">
                       <div className="max-w-[420px] text-center py-[10vw] md:py-[5vw]">
-                        <a href={`mailto:${contact.talentEmailAddress}`} className="inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] pb-[2px] rounded-full border-yellow border hover:bg-yellow hover:text-off-black focus:bg-yellow focus:text-off-black focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow mb-8">Talent</a>
+                        <a href={`mailto:${contact.talentEmailAddress}`} className="inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] pb-[2px] rounded-full border-yellow border  focus:text-yellow focus:outline-none ring-offset-4 ring-offset-off-black focus:ring-[2px] ring-yellow mb-8 overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 relative">
+                          <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
+                          <span className="block overflow-hidden relative z-[10]">
+                            <span>Talent</span>
+                          </span>
+                        </a>
 
                         <p className="md:text-lg md:leading-snug">{home.getStartedTalentText}</p>
                       </div>

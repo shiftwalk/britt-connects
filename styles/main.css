@@ -183,3 +183,25 @@ circle {
     opacity: 0;
   }  
 }
+
+
+.fancy-nav {
+  &:hover .fancy-nav__item {
+    @apply md:text-yellow-dark;
+  }
+}
+
+.fancy-nav__item {
+  
+  .fancy-nav__item-inner {
+    @apply transition-all ease-in-out duration-500
+  }
+
+  .fancy-nav__item-inner-inner {
+    @apply transition-all ease-in-out duration-500
+  }
+
+  &:hover {
+    @apply opacity-100 md:text-off-black !important;
+  }
+}
