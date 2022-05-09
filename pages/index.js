@@ -119,7 +119,7 @@ export default function Home(initialData) {
               <m.div variants={fade}>
                 <Header bioImage={home.bioImage} bioHeading={home.bioHeading} bioText={home.bioText} bioContext={bioContext} />
                 
-                <section className="h-screen relative p-3 md:p-4 xl:p-6">
+                <section className="h-screen relative p-3 md:p-4 xl:p-6 pt-[120px] md:pt-[160px] xl:pt-[160px]">
                   <m.h1 initial="initial" animate="enter" exit="exit" variants={{ enter: { transition: { staggerChildren: 0.03 }}}} className="text-[13vw] md:text-[13.5vw] font-display uppercase leading-[1] md:leading-[1] text-center relative z-10 mix-blend-lighten pt-[2vw]" data-scroll data-scroll-speed={0.4}>
                     <span className="block overflow-hidden relative">
                       <m.span className="block mb-[-1.5vw]" variants={reveal}>Connecting</m.span>

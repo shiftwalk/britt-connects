@@ -23,7 +23,7 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
   }
   
   return (
-    <header className="p-3 md:p-4 xl:p-6 mb-20 md:mb-20 xl:mb-20  relative z-[100]" id="header" data-scroll data-scroll-sticky data-scroll-target="#__next">
+    <header className="p-3 md:p-4 xl:p-6 fixed top-0 left-0 right-0 z-[100]" id="header" data-scroll data-scroll-sticky data-scroll-target="#__next">
       <div className="fixed-target" id="fixed-target"></div>
       <div className="flex items-center relative z-10">
         <Link href="/">
