@@ -78,11 +78,11 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
                 animate={{ x: '20%' }}
                 exit={{ x: '100%' }}
                 transition={{ duration: 1.5, ease: [0.19,1,0.22,1] }}
-                className="absolute top-0 right-0 bottom-0 h-screen md:w-[60vw] lg:w-[50vw] max-w-[900px] bg-off-black z-50"
+                className="absolute top-0 right-0 bottom-0 h-screen w-[100%] md:w-[60vw] lg:w-[50vw] max-w-[900px] bg-off-black z-50"
               >
                 <div className="h-screen p-4 md:p-6 xl:p-10" data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
 
-                  <button onClick={ToggleBio} className="absolute top-0 right-0 m-8 md:m-12 xl:m-16 z-50 block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-[22px] md:text-[38px] xl:text-[44px] 2xl:text-[52px] ml-auto px-2 md:px-3 2xl:px-4 pt-[3px] md:pt-[4px] pb-[2px] md:pb-[2px] rounded-full border-yellow border focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500">
+                  <button onClick={ToggleBio} className="absolute top-0 right-0 m-8 mr-12 md:m-12 xl:m-16 z-50 block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-[22px] md:text-[38px] xl:text-[44px] 2xl:text-[52px] ml-auto px-2 md:px-3 2xl:px-4 pt-[3px] md:pt-[4px] pb-[2px] md:pb-[2px] rounded-full border-yellow border focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500">
                   <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
                     <span className="block overflow-hidden relative z-[10]">
                       <span>Close</span>
@@ -102,9 +102,9 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
                     <div className="w-11/12 md:w-11/12 max-w-[1800px] h-[45%] flex relative">
                       <span className="block absolute top-0 left-0 text-2xl mt-[-20px]">&darr;</span>
                       <div className="mt-auto w-full">
-                        <p className="text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-[58px] indent-[8vw] 2xl:indent-[90px] leading-[0.9] mb-8 w-full">{bioHeading}</p>
+                        <p className="text-[28px] md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-[58px] indent-[8vw] 2xl:indent-[90px] leading-[0.9] mb-8 w-full">{bioHeading}</p>
 
-                        <p className="text-lg md:text-xl xl:text-xl leading-tight w-11/12 md:w-[80%] xl:w-[75%] 2xl:w-[70%]">{bioText}</p>
+                        <p className="text-base md:text-xl xl:text-xl leading-tight w-11/12 md:w-[80%] xl:w-[75%] 2xl:w-[70%]">{bioText}</p>
                       </div>
                     </div>
                   </div>

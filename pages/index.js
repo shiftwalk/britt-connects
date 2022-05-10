@@ -107,7 +107,7 @@ export default function Home(initialData) {
       <NextSeo title={home.title} />
       
       <LazyMotion features={domAnimation}>
-        <div className={`transition-translate ease-[cubic-bezier(0.77,0,0.18,1)] duration-[750ms] ${bioContext ? 'md:translate-x-[-10%]' : 'md:translate-x-[0]' }`}>
+        <div className={`transition-translate ease-[cubic-bezier(0.77,0,0.18,1)] duration-[750ms] ${bioContext ? 'translate-x-[-10%]' : 'translate-x-[0]' }`}>
           <SmoothWrapper>
             
             <m.main
