@@ -129,7 +129,7 @@ export default function Home(initialData) {
                     </span>
                   </m.h1>
 
-                  <div className="md:absolute inset-0 flex items-center justify-center z-0 py-5 mt-[-50px] md:mt-0 md:py-0 overflow-hidden -mx-3" data-scroll data-scroll-speed={-0.55}>
+                  <div className="md:absolute inset-0 flex items-center justify-center z-0 py-5 mt-[-50px] md:mt-0 md:py-0 overflow-hidden md:overflow-visible -mx-3" data-scroll data-scroll-speed={-0.55}>
                     <div className="relative overflow-hidden w-[100vw] md:w-[50vw] lg:w-[45vw] xl:w-[44vw] 2xl:w-[42vw] h-[60vh] md:h-[50vh] lg:h-[80vh] xl:h-[80vh] 2xl:h-[77vh] md:rounded-xl rotate-[-2deg] md:rotate-[-3deg] max-w-[840px] hero-image md:mt-[4vw] lg:mt-[24vh] xl:mt-[26vh] 2xl:mt-[30vh] scale-105 md:scale-100">
                       <m.div variants={revealOut} className="absolute inset-0 bg-yellow-dark z-50"></m.div>
 
