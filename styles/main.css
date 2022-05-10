@@ -130,11 +130,11 @@ body {
 
 .ethos-text {
   & > p {
-    @apply text-base md:text-lg md:leading-snug xl:text-xl xl:leading-snug 2xl:text-2xl 2xl:leading-snug mb-6 md:mb-8
+    @apply text-base lg:text-lg lg:leading-[1.2] xl:text-xl xl:leading-[1.2] 2xl:text-[24px] 2xl:leading-[1.2] mb-6 md:mb-8
   }
 
   & > p:first-of-type {
-    @apply indent-9;
+    @apply indent-9 md:indent-12;
   }
 }
 
