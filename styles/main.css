@@ -213,3 +213,18 @@ circle {
     @apply opacity-100 md:text-off-black !important;
   }
 }
+
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 3s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 50% 80%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(10deg) }
+    50% { transform: rotate(-5deg) }
+    100% { transform: rotate(10deg) }
+}
