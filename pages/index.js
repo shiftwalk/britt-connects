@@ -237,7 +237,7 @@ export default function Home(initialData) {
                     <ul className="mt-[12vw] md:mt-[8vw] xl:mt-[6vw] fancy-nav">
                       {home.rolesFilled.map((e, i) => {
                         return (
-                          <li className={`text-yellow pt-2 pb-4 md:py-2 fancy-nav__item group md:hover:text-off-black relative overflow-hidden`} key={i}>
+                          <li className={`text-yellow pt-2 pb-2 md:pt-2 md:pb-[6px] fancy-nav__item group md:hover:text-off-black relative overflow-hidden`} key={i}>
                             <span className="block rounded-xl bg-yellow h-0 md:group-hover:h-[80%] xl:group-hover:h-[83%] absolute bottom-0 left-0 right-0 z-0 fancy-nav__item-inner my-2"></span>
 
                             <span className="block bg-yellow-dark md:group-hover:bg-yellow transition ease-in-out duration-500 h-[1px] w-full absolute bottom-0 left-0 right-0 z-0">
