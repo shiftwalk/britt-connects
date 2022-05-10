@@ -48,6 +48,10 @@ body {
   animation: spin 30s linear infinite;
 }
 
+.spin--fast {
+  animation: spin 20s linear infinite;
+}
+
 .spin-backwards {
   animation: spinBack 30s linear infinite;
 }
@@ -93,20 +97,15 @@ body {
 .embla__button {
   outline: 0;
   cursor: pointer;
-  opacity: 0;
-  background-color: transparent;
+  @apply block z-40 w-[18vw] md:w-[11vw] xl:w-[9vw] h-[18vw] md:h-[11vw] xl:h-[9vw];
   touch-action: manipulation;
   position: absolute;
-  z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 23%;
   border: 0;
-  width: 30px;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-  fill: #1bcacd;
-  padding: 0;
+
+  & svg {
+    fill-opacity: 0.25;
+  }
 }
 
 .embla__button:disabled {
@@ -120,11 +119,11 @@ body {
 }
 
 .embla__button--prev {
-  left: 27px;
+  @apply left-[20px] md:left-[4vw]
 }
 
 .embla__button--next {
-  right: 27px;
+  @apply right-[10vw] md:right-[24vw] -rotate-12
 }
 
 

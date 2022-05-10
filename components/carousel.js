@@ -2,27 +2,18 @@ import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from 'next/image'
 
-const PrevButton = ({ enabled, onClick }) => (
-  <button
-    className="embla__button embla__button--prev"
-    onClick={onClick}
-    disabled={!enabled}
-  >
-    <svg className="embla__button__svg" viewBox="137.718 -1.001 366.563 644">
-      <path d="M428.36 12.5c16.67-16.67 43.76-16.67 60.42 0 16.67 16.67 16.67 43.76 0 60.42L241.7 320c148.25 148.24 230.61 230.6 247.08 247.08 16.67 16.66 16.67 43.75 0 60.42-16.67 16.66-43.76 16.67-60.42 0-27.72-27.71-249.45-249.37-277.16-277.08a42.308 42.308 0 0 1-12.48-30.34c0-11.1 4.1-22.05 12.48-30.42C206.63 234.23 400.64 40.21 428.36 12.5z" />
-    </svg>
-  </button>
-);
 
 const NextButton = ({ enabled, onClick }) => (
   <button
-    className="embla__button embla__button--next"
+    className="embla__button embla__button--next transition-opacity ease-in-out duration-500 group"
     onClick={onClick}
+    data-scroll data-scroll-speed={1.2}
     disabled={!enabled}
   >
-    <svg className="embla__button__svg" viewBox="0 0 238.003 238.003">
-      <path d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z" />
-    </svg>
+    <div className="button__inner -rotate-6 group-hover:rotate-0 group-hover:scale-105 transition ease-in-out duration-500">
+      <svg className="w-full spin--fast fill-yellow-dark" viewBox="0 0 189 190" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M75.416 3.35a29.5 29.5 0 0 1 16.53-1.744l36.16 6.596a29.5 29.5 0 0 1 14.85 7.47L169.81 40.77a29.504 29.504 0 0 1 8.454 14.312l9.021 35.632a29.504 29.504 0 0 1-.625 16.611l-11.676 34.853a29.5 29.5 0 0 1-9.506 13.635l-28.665 23.009a29.5 29.5 0 0 1-15.369 6.331l-36.554 3.859a29.507 29.507 0 0 1-16.352-2.983L35.7 169.512a29.5 29.5 0 0 1-12.144-11.35L4.862 126.514a29.497 29.497 0 0 1-4.08-16.113L2.167 73.67a29.5 29.5 0 0 1 5.28-15.762l21.021-30.152A29.5 29.5 0 0 1 41.43 17.351l33.986-14Z" stroke="#DEE212" strokeWidth={2}/></svg>
+      <span className="absolute inset-0 w-full h-full flex items-center justify-center uppercase text-sm md:text-base xl:text-xl">Explore</span>
+    </div>
   </button>
 );
 
@@ -32,6 +23,7 @@ const Carousel = ({ items }) => {
     skipSnaps: false,
     align: 'center',
     loop: true,
+    speed: 4,
     inViewThreshold: 0.33
   });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
@@ -52,7 +44,7 @@ const Carousel = ({ items }) => {
   }, [embla, onSelect]);
 
   return (
-    <div className="embla">
+    <div className="embla relative">
       <div className="embla__viewport" ref={viewportRef}>
         <div className="embla__container">
           {items.map((e, index) => (
@@ -69,7 +61,6 @@ const Carousel = ({ items }) => {
           ))}
         </div>
       </div>
-      <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
       <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
     </div>
   );
