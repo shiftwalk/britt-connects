@@ -75,7 +75,7 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
                 initial={{ x: '100%' }}
                 animate={{ x: '20%' }}
                 exit={{ x: '100%' }}
-                transition={{ duration: 1.4, delay: 0.2, ease: [0.19,1,0.22,1] }}
+                transition={{ duration: 1.4, ease: [0.19,1,0.22,1] }}
                 className="absolute top-0 right-0 bottom-0 h-screen md:w-[60vw] lg:w-[50vw] max-w-[900px] bg-off-black z-50"
               >
                 <div className="h-screen p-4 md:p-6 xl:p-10" data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
