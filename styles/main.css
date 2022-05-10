@@ -79,11 +79,11 @@ body {
 }
 
 .embla__slide {
-  @apply py-[3vw] pl-[5vw] min-w-[65vw] md:min-w-[55vw] relative;
+  @apply py-[3vw] pl-[5vw] min-w-[80vw] md:min-w-[55vw] relative;
 }
 
 .embla__slide__inner {
-  @apply rounded-xl -rotate-3 bg-yellow-dark bg-opacity-60 h-[33vw] overflow-hidden relative;
+  @apply rounded-xl -rotate-3 bg-yellow-dark bg-opacity-60 h-[55vw] md:h-[33vw] overflow-hidden relative;
 }
 
 .embla__slide__img {
@@ -130,7 +130,7 @@ body {
 
 .ethos-text {
   & > p {
-    @apply text-base lg:text-lg lg:leading-[1.2] xl:text-xl xl:leading-[1.2] 2xl:text-[24px] 2xl:leading-[1.2] mb-6 md:mb-8
+    @apply text-lg leading-[1.2] lg:text-lg lg:leading-[1.2] xl:text-xl xl:leading-[1.2] 2xl:text-[24px] 2xl:leading-[1.2] mb-6 md:mb-8
   }
 
   & > p:first-of-type {

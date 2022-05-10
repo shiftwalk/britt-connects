@@ -5,7 +5,7 @@ export default function Footer({ contact }) {
     <footer className="p-3 md:p-4 xl:p-6">
       <div className="bg-yellow w-full rounded-full text-off-black py-3 px-6 text-sm md:text-base xl:text-lg">
         <div className="flex flex-wrap">
-          <div className="flex space-x-1 mb-1 md:mb-0 justify-center md:justify-start w-full md:w-auto">
+          <div className="space-x-1 mb-1 md:mb-0 justify-center md:justify-start w-full md:w-auto hidden md:flex">
             <span className="block py-1">&copy; Copyright { new Date().getFullYear()}, BrittConnects</span>
           </div>
 
@@ -45,7 +45,7 @@ export default function Footer({ contact }) {
               </Link></span>
           </div>
 
-          <div className="md:ml-auto w-full md:w-auto flex space-x-1 justify-center md:justify-start">
+          <div className="md:ml-auto w-full md:w-auto space-x-1 justify-center md:justify-start hidden md:flex">
             <span className="flex items-center space-x-1 py-1">
               <span className="block">Site by</span>
               <a href="https://shiftwalk.studio" target="_blank" rel="noopener noreferrer" className="focus-visible:outline-none ring-offset-4 ring-offset-yellow focus-visible:ring-[2px] ring-off-black relative overflow-hidden group leading-none inline-block">
@@ -55,6 +55,14 @@ export default function Footer({ contact }) {
           </div>
         </div>
       </div>
+      <span className="block pt-3 text-xs text-center md:hidden">&copy; Copyright { new Date().getFullYear()}, BrittConnects</span>
+      <span className="flex items-center space-x-1 py-1 text-xs text-center justify-center md:hidden">
+        <span className="block">Site by</span>
+        <a href="https://shiftwalk.studio" target="_blank" rel="noopener noreferrer" className="focus-visible:outline-none ring-offset-4 ring-offset-yellow focus-visible:ring-[2px] ring-off-black relative overflow-hidden group leading-none inline-block">
+        <span className="block py-1 transition-all ease-in-out duration-500 group-hover:translate-y-full">ShiftWalk</span>
+        <span className="block py-1 absolute inset-0 -translate-y-full transition-all ease-in-out duration-500 group-hover:translate-y-0">ShiftWalk</span>
+        <span className="absolute bottom-0 left-0 right-0 w-0 h-[1px] bg-off-black block group-hover:w-full transition-all ease-in-out duration-500 delay-150"></span></a>
+      </span>
     </footer>
   )
 }
