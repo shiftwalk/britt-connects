@@ -344,7 +344,8 @@ export default function Home(initialData) {
                         <a href={`mailto:${contact.clientsEmailAddress}`} className="hidden md:inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] md:pt-[5px] pb-[2px] md:pb-[2px] rounded-full border-yellow border  focus-visible:text-yellow focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow mb-8 overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 relative">
                           <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
                           <span className="block overflow-hidden relative z-[10]">
-                            <span>Clients</span>
+                            <span className="block group-hover:-translate-y-full group-hover:translate-x-3 transition-transform ease-in-out duration-500">Clients</span>
+                            <span className="block absolute inset-0 translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:-translate-x-0 transition-transform ease-in-out duration-500">Clients</span>
                           </span>
                         </a>
 
@@ -363,7 +364,8 @@ export default function Home(initialData) {
                         <a href={`mailto:${contact.talentEmailAddress}`} className="hidden md:inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] md:pt-[5px] pb-[2px] md:pb-[2px] rounded-full border-yellow border  focus-visible:text-yellow focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow mb-8 overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 relative">
                           <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
                           <span className="block overflow-hidden relative z-[10]">
-                            <span>Talent</span>
+                            <span className="block group-hover:translate-y-full group-hover:translate-x-3 transition-transform ease-in-out duration-500">Talent</span>
+                            <span className="block absolute inset-0 -translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:-translate-x-0 transition-transform ease-in-out duration-500">Talent</span>
                           </span>
                         </a>
 

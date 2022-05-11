@@ -56,7 +56,10 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
         <button onClick={ToggleBio} className="block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-[25px] md:text-[38px] xl:text-[44px] 2xl:text-[52px] ml-auto px-2 md:px-3 2xl:px-4 pt-[3px] md:pt-[4px] pb-[2px] md:pb-[2px] rounded-full border-yellow border focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow relative overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 bg-off-black">
           <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
           <span className="block overflow-hidden relative z-[10]">
-            <m.span className="block" variants={reveal}>Bio</m.span>
+            <m.span className="block" variants={reveal}>
+              <span className="block group-hover:-translate-y-full group-hover:translate-x-3 transition-transform ease-in-out duration-500">Bio</span>
+              <span className="block absolute inset-0 translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:-translate-x-0 transition-transform ease-in-out duration-500">Bio</span>
+            </m.span>
           </span>
         </button>
       </div>
@@ -85,7 +88,8 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
                   <button onClick={ToggleBio} className="absolute top-0 right-0 m-8 mr-12 md:m-12 xl:m-16 z-50 block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-[25px] md:text-[38px] xl:text-[44px] 2xl:text-[58px] ml-auto px-2 md:px-3 2xl:px-4 pt-[3px] md:pt-[4px] pb-[2px] md:pb-[2px] rounded-full border-yellow border focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500">
                   <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
                     <span className="block overflow-hidden relative z-[10]">
-                      <span>Close</span>
+                    <span className="block group-hover:-translate-y-full group-hover:translate-x-3 transition-transform ease-in-out duration-500">Close</span>
+                    <span className="block absolute inset-0 translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:-translate-x-0 transition-transform ease-in-out duration-500">Close</span>
                     </span>
                   </button>
 
