@@ -97,14 +97,14 @@ body {
 .embla__button {
   outline: 0;
   cursor: pointer;
-  @apply block z-40 w-[18vw] md:w-[11vw] xl:w-[9vw] h-[18vw] md:h-[11vw] xl:h-[9vw];
+  @apply block z-40 w-[24vw] md:w-[11vw] xl:w-[9vw] h-[24vw] md:h-[11vw] xl:h-[9vw];
   touch-action: manipulation;
   position: absolute;
   top: 23%;
   border: 0;
 
   & svg {
-    fill-opacity: 0.25;
+    fill-opacity: 0;
   }
 }
 

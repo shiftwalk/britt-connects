@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Footer({ contact }) {
   return (
     <footer className="p-3 md:p-4 xl:p-6">
-      <div className="bg-yellow w-full rounded-full text-off-black py-3 px-6 text-sm md:text-base xl:text-lg">
+      <div className="bg-yellow w-full rounded-full text-off-black pt-2 pb-1 px-6 text-sm md:text-base xl:text-lg">
         <div className="flex flex-wrap">
           <div className="space-x-1 mb-1 md:mb-0 justify-center md:justify-start w-full md:w-auto hidden md:flex">
             <span className="block py-1">&copy; Copyright { new Date().getFullYear()}, BrittConnects</span>
