@@ -257,7 +257,7 @@ export default function Home(initialData) {
                 
                 <section className="p-3 md:p-4 xl:p-6 pt-[17vw] md:pt-[12vw] xl:pt-[10vw]">
                   <h2 className="text-[14vw] md:text-[8.4vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]"><span className="block md:inline-block -ml-8 md:ml-0">
-                  <RevealOnEnter>Roles</RevealOnEnter>
+                  <RevealOnEnter>Roles&nbsp;</RevealOnEnter>
                   </span> 
                   <span className="block md:inline-block ml-6 md:ml-0">
                   <RevealOnEnter>Filled</RevealOnEnter>
