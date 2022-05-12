@@ -28,6 +28,7 @@
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^3.2.0",
+    "embla-carousel": "^4.5.3",
     "embla-carousel-react": "^6.2.0",
     "framer-motion": "^6.3.0",
     "locomotive-scroll": "^4.1.4",

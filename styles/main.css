@@ -87,7 +87,19 @@ body {
 }
 
 .embla__slide__inner {
-  @apply rounded-xl -rotate-3 bg-yellow-dark bg-opacity-60 h-[55vw] md:h-[33vw] overflow-hidden relative;
+  @apply rounded-xl -rotate-3 bg-yellow-dark bg-opacity-60 h-[55vw] md:h-[33vw] overflow-hidden relative transition-transform ease-in-out duration-[750ms] translate-y-[2.2vw];
+}
+
+.embla__slide.is-selected {
+  .embla__slide__inner {
+    @apply -rotate-1 translate-y-0;
+  }
+}
+
+.embla__slide.is-selected + .embla__slide {
+  .embla__slide__inner {
+    @apply rotate-3 translate-y-[1.2vw];
+  }
 }
 
 .embla__slide__img {

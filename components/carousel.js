@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useEmblaCarousel } from 'embla-carousel/react'
 import Image from 'next/image'
 
 
@@ -24,7 +24,7 @@ const Carousel = ({ items }) => {
     align: 'center',
     loop: true,
     speed: 4,
-    inViewThreshold: 0.33
+    inViewThreshold: 0.8,
   });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -49,13 +49,15 @@ const Carousel = ({ items }) => {
         <div className="embla__container">
           {items.map((e, index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__inner">
-                <Image
-                  src={e.asset.url}
-                  alt="Something"
-                  layout="fill"
-                  className="embla__slide__img"
-                />
+              <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.75">
+                <div className="embla__slide__inner">
+                  <Image
+                    src={e.asset.url}
+                    alt="Something"
+                    layout="fill"
+                    className="embla__slide__img"
+                  />
+                </div>
               </div>
             </div>
           ))}
