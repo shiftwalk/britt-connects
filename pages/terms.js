@@ -64,7 +64,7 @@ export default function Home(initialData) {
               <m.div variants={fade}>
                 <section className="relative p-3 md:p-4 xl:p-6">
                   <Header bioImage={home.bioImage} bioHeading={home.bioHeading} bioText={home.bioText} />
-                  <h1 className="text-[12vw] md:text-[9.5vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[2vw]">Terms And Conditions</h1>
+                  <h1 className="text-[12vw] md:text-[9.5vw] font-display uppercase leading-[0.9] md:leading-[0.9] text-center relative z-10 mix-blend-lighten pt-[12vw]">Terms And Conditions</h1>
                 </section>
 
                 <section className="p-3 md:p-4 xl:p-6 py-[14vw] md:py-[10vw] xl:py-[5vw] px-4 md:px-[10vw] xl:px-[12vw] mx-auto">

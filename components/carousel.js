@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useEmblaCarousel } from 'embla-carousel/react'
-import Image from 'next/image'
+import Image from '@/components/image'
 
 
 const NextButton = ({ enabled, onClick }) => (
@@ -52,7 +52,8 @@ const Carousel = ({ items }) => {
               <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.75">
                 <div className="embla__slide__inner">
                   <Image
-                    src={e.asset.url}
+                    image={e}
+                    widthOverride={1200}
                     alt="Something"
                     layout="fill"
                     className="embla__slide__img"

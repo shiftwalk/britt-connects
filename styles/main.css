@@ -104,6 +104,8 @@ body {
 
 .embla__slide__img {
   @apply block inset-0 absolute w-full h-full object-cover object-center scale-100;
+
+  transition: opacity 0.5s ease-in-out;
 }
 
 .embla__button {
@@ -223,6 +225,10 @@ circle {
   &:hover {
     @apply opacity-100 md:text-off-black !important;
   }
+}
+
+.embla__slide.has-loaded .embla__slide__img {
+  opacity: 1;
 }
 
 

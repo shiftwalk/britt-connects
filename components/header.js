@@ -9,7 +9,9 @@ import { BioContext } from 'context/bio'
 
 export default function Header({ bioImage, bioHeading, bioText, noBio }) {
   const [bioOpen, setBioOpen] = useState(false)
+  const [currentTimeZone, setCurrentTimeZone] = useState('la')
   const [bioContext, setBioContext] = useContext(BioContext);
+  const [timeToggle, setTimeToggle] = useState(false);
   const { scroll } = useLocomotiveScroll()
 
   const ToggleBio = () => {
@@ -25,10 +27,62 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
   const scrollToTop = () => {
     scroll.scrollTo(0)
   }
+
+  const timezoneToggle = () => {
+    setTimeToggle(!timeToggle);
+  }
+
+  const timezoneUpdate = (e) => {
+    setTimeToggle(false);
+
+    setCurrentTimeZone(e)
+  }
   
   return (
     <header className="p-3 md:p-4 xl:p-6 fixed top-0 left-0 right-0 z-[100]" id="header" data-scroll data-scroll-sticky data-scroll-target="#__next">
       <div className="fixed-target" id="fixed-target"></div>
+
+      <div className={`absolute top-0 left-0 text-off-black p-2 z-[10] mt-24 w-[185px] rounded-xl text-base transition-opacity ease-in-out duration-300 overflow-hidden ml-[45%] ${timeToggle ? 'opacity-100' : 'opacity-100 pointer-events-none' }`}>
+        <div className={`bg-yellow inset-0 absolute transition-all ease-in-out duration-500 ${timeToggle ? 'h-full' : 'h-0 delay-[200ms]' }`}></div>
+          <div className="relative z-[10]">
+          <button onClick={()=> timezoneUpdate('la')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
+            <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
+            <span className="block relative overflow-hidden z-[10]">
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0' : 'translate-y-full delay-[0ms]' }`}>Los Angeles</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Los Angeles</span>
+            </span>
+          </button>
+          <button onClick={()=> timezoneUpdate('ny')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
+          <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
+            <span className="block relative overflow-hidden z-[10]">
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[50ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>New York</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>New York</span>
+            </span>
+          </button>
+          <button onClick={()=> timezoneUpdate('ba')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
+          <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
+            <span className="block relative overflow-hidden z-[10]">
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[100ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>Buenos Aires</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Buenos Aires</span>
+            </span>
+          </button>
+          <button onClick={()=> timezoneUpdate('sp')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
+          <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
+            <span className="block relative overflow-hidden z-[10]">
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[150ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>Sao Paolo</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Sao Paolo</span>
+            </span>
+          </button>
+          <button onClick={()=> timezoneUpdate('london')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
+            <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
+            <span className="block relative overflow-hidden z-[10]">
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[200ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>Los Angeles</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Los Angeles</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      
       <div className="flex items-center relative z-10">
         <button onClick={scrollToTop} className="flex flex-wrap space-x-2 items-center mr-auto focus-visible:outline-none focus-visible:border-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow text-left">
           <div className="w-[45px] md:w-[52px] xl:w-[58px] 2xl:w-[65px]">
@@ -44,13 +98,30 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
           </m.span>
         </button>
 
-        <span className="tracking-tight leading-none md:leading-none xl:leading-none text-sm md:text-xl xl:text-2xl mx-auto relative hidden md:block">
-          <div className="relative overflow-hidden -ml-8 md:-ml-[80px]">
-            <m.div variants={reveal} className="flex items-center space-x-[6px]">
-              <svg className="w-[18px] md:w-[23px] xl:w-[33px] mb-px" viewBox="0 0 35 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M28.401 18.535c2.84-1.868 4.374-4.295 4.374-6.785s-1.534-4.917-4.374-6.785C25.571 3.103 21.58 1.906 17.1 1.906S8.629 3.103 5.799 4.966C2.959 6.832 1.425 9.26 1.425 11.75s1.534 4.917 4.374 6.785c2.83 1.862 6.821 3.059 11.301 3.059s8.471-1.197 11.301-3.06ZM17.1 23c9.444 0 17.1-5.037 17.1-11.25S26.544.5 17.1.5C7.656.5 0 5.537 0 11.75S7.656 23 17.1 23Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M17.1 21.594c3.951 0 7.615-4.12 7.615-9.844 0-5.723-3.664-9.844-7.615-9.844s-7.615 4.12-7.615 9.844c0 5.724 3.664 9.844 7.615 9.844Zm0 1.406c4.97 0 9-5.037 9-11.25S22.07.5 17.1.5s-9 5.037-9 11.25S12.13 23 17.1 23Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M33.3 12.2H.9v-1.8h32.4v1.8Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M16.2 23V1.4H18V23h-1.8Z" fill="#DEE212"/></svg>
-              <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} /></span>, <span className="hidden md:inline-block">Los Angeles</span><span className="inline-block md:hidden">LA</span></span>
-            </m.div>
-          </div>
+        <span className="tracking-tight leading-[1.025] md:leading-[1.025] xl:leading-[1.025] text-sm md:text-xl xl:text-2xl mx-auto relative hidden md:block">
+          <button onClick={()=> timezoneToggle()}>
+            <div className="relative overflow-hidden -ml-8 md:-ml-[80px]">
+              <m.div variants={reveal} className="flex items-center space-x-[6px]">
+                <svg className="w-[18px] md:w-[23px] xl:w-[33px] mb-px" viewBox="0 0 35 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M28.401 18.535c2.84-1.868 4.374-4.295 4.374-6.785s-1.534-4.917-4.374-6.785C25.571 3.103 21.58 1.906 17.1 1.906S8.629 3.103 5.799 4.966C2.959 6.832 1.425 9.26 1.425 11.75s1.534 4.917 4.374 6.785c2.83 1.862 6.821 3.059 11.301 3.059s8.471-1.197 11.301-3.06ZM17.1 23c9.444 0 17.1-5.037 17.1-11.25S26.544.5 17.1.5C7.656.5 0 5.537 0 11.75S7.656 23 17.1 23Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M17.1 21.594c3.951 0 7.615-4.12 7.615-9.844 0-5.723-3.664-9.844-7.615-9.844s-7.615 4.12-7.615 9.844c0 5.724 3.664 9.844 7.615 9.844Zm0 1.406c4.97 0 9-5.037 9-11.25S22.07.5 17.1.5s-9 5.037-9 11.25S12.13 23 17.1 23Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M33.3 12.2H.9v-1.8h32.4v1.8Z" fill="#DEE212"/><path fillRule="evenodd" clipRule="evenodd" d="M16.2 23V1.4H18V23h-1.8Z" fill="#DEE212"/></svg>
+
+                { currentTimeZone == 'la' && (
+                  <span className="block leading-[1.025]"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} /></span>, <span className="hidden md:inline-block">Los Angeles ▾</span><span className="inline-block md:hidden">LA</span></span>
+                )}
+                { currentTimeZone == 'ny' && (
+                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/New_York'} /></span>, <span className="hidden md:inline-block">New York ▾</span><span className="inline-block md:hidden">NY</span></span>
+                )}
+                { currentTimeZone == 'ba' && (
+                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/Argentina/Buenos_Aires'} /></span>, <span className="hidden md:inline-block">Buenos Aires ▾</span><span className="inline-block md:hidden">BA</span></span>
+                )}
+                { currentTimeZone == 'sp' && (
+                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/Sao_Paulo'} /></span>, <span className="hidden md:inline-block">Sao Paolo ▾</span><span className="inline-block md:hidden">SP</span></span>
+                )}
+                { currentTimeZone == 'london' && (
+                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'Europe/London'} /></span>, <span className="hidden md:inline-block">London ▾</span><span className="inline-block md:hidden">UK</span></span>
+                )}
+              </m.div>
+            </div>
+          </button>
         </span>
 
         <button onClick={ToggleBio} className="block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-[25px] md:text-[38px] xl:text-[44px] 2xl:text-[52px] ml-auto px-2 md:px-3 2xl:px-4 pt-[3px] md:pt-[4px] pb-[2px] md:pb-[2px] rounded-full border-yellow border focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow relative overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 bg-off-black">
