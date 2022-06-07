@@ -76,8 +76,8 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
           <button onClick={()=> timezoneUpdate('london')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
             <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
             <span className="block relative overflow-hidden z-[10]">
-              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[200ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>Los Angeles</span>
-              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Los Angeles</span>
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[200ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>London</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>London</span>
             </span>
           </button>
         </div>
