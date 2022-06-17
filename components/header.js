@@ -180,7 +180,7 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
                       <div className="mt-auto w-full">
                         <p className="text-[28px] md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-[58px] indent-[8vw] 2xl:indent-[90px] leading-[0.9] mb-8 w-full">{bioHeading}</p>
 
-                        <div className="text-base md:text-xl xl:text-xl leading-tight w-11/12 md:w-[80%] xl:w-[75%] 2xl:w-[70%] content pb-12">
+                        <div className="leading-[1.2] text-base lg:text-lg lg:leading-[1.2] xl:text-lg xl:leading-[1.2] 2xl:text-xl 2xl:leading-[1.2] w-11/12 md:w-[80%] xl:w-[75%] 2xl:w-[70%] content pb-12">
                           <SanityBlockContent serializers={{ container: ({ children }) => children }} blocks={bioText} />
                         </div>
                       </div>
