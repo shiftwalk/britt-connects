@@ -25,6 +25,15 @@ body {
   scrollbar-width: none; 
 }
 
+.bio {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
 
 .hero-image img {
   @apply bg-blend-lighten opacity-90 !important;
