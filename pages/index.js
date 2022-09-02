@@ -230,7 +230,7 @@ export default function Home(initialData) {
                   <div className="grid grid-cols-8 md:grid-cols-12 gap-6">
                     <div className="col-span-8 md:col-span-3 xl:col-span-2">
                       <span className="block mb-4 md:mb-6 md:text-lg">
-                        <RevealOnEnter>(Ethos &amp; Clients)</RevealOnEnter>
+                        <RevealOnEnter>(Ethos &amp; Disciplines)</RevealOnEnter>
                       </span>
                     </div>
                     <div className="col-span-7 md:col-start-4 md:col-span-4 content md:text-lg md:leading-tight max-w-[500px]">
