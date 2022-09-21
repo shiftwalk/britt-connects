@@ -4,7 +4,7 @@ import { AnimatePresence, m } from "framer-motion";
 import { fade } from '@/helpers/transitions'
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
-export default function Quotes({ quotes }) {
+export default function Quotes({ quotes, heading }) {
   const { scroll } = useLocomotiveScroll()
   const [current, setCurrent] = useState(0);
   
@@ -17,7 +17,7 @@ export default function Quotes({ quotes }) {
     <div className="w-full pt-[10vw] transition-all ease-in-out duration-300">
 
       <span className="block mx-auto text-center md:text-lg" data-scroll data-scroll-speed={1.1}>
-      <RevealOnEnter>(Kind words)</RevealOnEnter></span>
+      <RevealOnEnter>({heading})</RevealOnEnter></span>
 
       <div className="flex items-center justify-center space-x-3 mt-4 mb-6 md:mb-12 relative z-[10]" data-scroll data-scroll-speed={1.1}>
         {quotes.map((e, i)=> {

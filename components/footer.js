@@ -26,7 +26,7 @@ export default function Footer({ contact }) {
               </span>
             </div>
 
-            <div className="w-full md:w-auto flex space-x-2 lg:space-x-3 mb-1 md:mb-0 mx-auto items-center justify-center md:justify-start">
+            <div className="w-full md:w-auto flex space-x-2 lg:space-x-3 mb-1 md:mb-0 mx-auto items-center justify-center md:justify-start md:mx-auto md:-translate-x-16">
 
               {contact.socials.map((e, i) => {
                 return (
@@ -62,7 +62,7 @@ export default function Footer({ contact }) {
                 </Link></span>
             </div> */}
 
-            <div className="md:ml-auto w-full md:w-auto space-x-1 justify-center md:justify-start hidden md:flex">
+            <div className="w-full md:w-auto space-x-1 justify-center md:justify-start hidden md:flex">
               <span className="flex items-center space-x-1 py-1">
                 <span className="block">Site by</span>
                 <a href="https://shiftwalk.studio" target="_blank" rel="noopener noreferrer" className="focus-visible:outline-none ring-offset-4 ring-offset-yellow focus-visible:ring-[2px] ring-off-black relative overflow-hidden group leading-none inline-block">
@@ -74,6 +74,7 @@ export default function Footer({ contact }) {
         </RevealOnEnter>
       </div>
       <span className="block pt-3 text-xs text-center md:hidden">&copy; Copyright { new Date().getFullYear()}, BrittConnects</span>
+      
       <span className="flex items-center space-x-1 py-1 text-xs text-center justify-center md:hidden">
         <span className="block">Site by</span>
         <a href="https://shiftwalk.studio" target="_blank" rel="noopener noreferrer" className="focus-visible:outline-none ring-offset-4 ring-offset-yellow focus-visible:ring-[2px] ring-off-black relative overflow-hidden group leading-none inline-block">

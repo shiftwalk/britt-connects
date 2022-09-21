@@ -45,6 +45,9 @@ const query = `{
         y
       },
     },
+    aboutHeading,
+    quotesHeading,
+    sectorsHeading,
     bioHeading,
     bioText,
     weWorkWith[] {
@@ -76,7 +79,9 @@ const query = `{
       role
     },
     getStartedClientsText,
+    getStartedLeftBlockTitle,
     getStartedTalentText,
+    getStartedRightBlockTitle,
     seo {
       ...,
       shareGraphic {
@@ -190,7 +195,7 @@ export default function Home(initialData) {
                 <section className="p-3 md:p-4 xl:p-6 pt-[14vw] md:pt-[16vw] xl:pt-[15vw]">
                   <span className="block mb-4 md:mb-6">
                     <RevealOnEnter>
-                      <span className="block md:text-lg">(We work with)</span>
+                      <span className="block md:text-lg">({home.sectorsHeading})</span>
                     </RevealOnEnter>
                   </span>
 
@@ -230,7 +235,7 @@ export default function Home(initialData) {
                   <div className="grid grid-cols-8 md:grid-cols-12 gap-6">
                     <div className="col-span-8 md:col-span-3 xl:col-span-2">
                       <span className="block mb-4 md:mb-6 md:text-lg">
-                        <RevealOnEnter>(Ethos &amp; Disciplines)</RevealOnEnter>
+                        <RevealOnEnter>({home.aboutHeading})</RevealOnEnter>
                       </span>
                     </div>
                     <div className="col-span-7 md:col-start-4 md:col-span-4 content md:text-lg md:leading-tight max-w-[500px]">
@@ -324,7 +329,7 @@ export default function Home(initialData) {
                 <section className="p-3 md:p-4 xl:p-6 pt-[18vw] md:pt-[13vw] xl:pt-[12vw]">
                   <div className="relative flex justify-center">
                     <div className="px-[3vw] md:px-[10vw] flex flex-wrap items-center justify-center">
-                      <Quotes quotes={home.quotes} />
+                      <Quotes quotes={home.quotes} heading={home.quotesHeading} />
                     </div>
 
                     <div className="opacity-25 absolute inset-0 z-0 w-full h-full flex items-center justify-center">
@@ -344,8 +349,8 @@ export default function Home(initialData) {
                         <a href={`mailto:${contact.clientsEmailAddress}`} className="hidden md:inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] md:pt-[5px] pb-[2px] md:pb-[2px] rounded-full border-yellow border  focus-visible:text-yellow focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow mb-8 overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 relative">
                           <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
                           <span className="block overflow-hidden relative z-[10]">
-                            <span className="block group-hover:-translate-y-full group-hover:translate-x-3 transition-transform ease-in-out duration-500">Clients</span>
-                            <span className="block absolute inset-0 translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:-translate-x-0 transition-transform ease-in-out duration-500">Clients</span>
+                            <span className="block group-hover:-translate-y-full group-hover:translate-x-3 transition-transform ease-in-out duration-500">{home.getStartedLeftBlockTitle}</span>
+                            <span className="block absolute inset-0 translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:-translate-x-0 transition-transform ease-in-out duration-500">{home.getStartedLeftBlockTitle}</span>
                           </span>
                         </a>
 
@@ -354,7 +359,7 @@ export default function Home(initialData) {
                         <a href={`mailto:${contact.clientsEmailAddress}`} className="inline-block md:hidden uppercase tracking-tight leading-none md:leading-none xl:leading-none text-4xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] md:pt-[5px] pb-[2px] md:pb-[2px] rounded-full border-yellow border  focus-visible:text-yellow focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow mb-8 overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 relative">
                           <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
                           <span className="block overflow-hidden relative z-[10]">
-                            <span>Clients</span>
+                            <span>{home.getStartedLeftBlockTitle}</span>
                           </span>
                         </a>
                       </div>
@@ -364,8 +369,8 @@ export default function Home(initialData) {
                         <a href={`mailto:${contact.talentEmailAddress}`} className="hidden md:inline-block uppercase tracking-tight leading-none md:leading-none xl:leading-none text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] md:pt-[5px] pb-[2px] md:pb-[2px] rounded-full border-yellow border  focus-visible:text-yellow focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow mb-8 overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 relative">
                           <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
                           <span className="block overflow-hidden relative z-[10]">
-                            <span className="block group-hover:-translate-y-full group-hover:translate-x-3 transition-transform ease-in-out duration-500">Talent</span>
-                            <span className="block absolute inset-0 translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:-translate-x-0 transition-transform ease-in-out duration-500">Talent</span>
+                            <span className="block group-hover:-translate-y-full group-hover:translate-x-3 transition-transform ease-in-out duration-500">{home.getStartedRightBlockTitle}</span>
+                            <span className="block absolute inset-0 translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:-translate-x-0 transition-transform ease-in-out duration-500">{home.getStartedRightBlockTitle}</span>
                           </span>
                         </a>
 
@@ -374,7 +379,7 @@ export default function Home(initialData) {
                         <a href={`mailto:${contact.talentEmailAddress}`} className="inline-block md:hidden uppercase tracking-tight leading-none md:leading-none xl:leading-none text-4xl md:text-4xl xl:text-5xl 2xl:text-6xl ml-auto px-3 md:px-4 2xl:px-6 pt-[3px] md:pt-[5px] pb-[2px] md:pb-[2px] rounded-full border-yellow border  focus-visible:text-yellow focus-visible:outline-none ring-offset-4 ring-offset-off-black focus-visible:ring-[2px] ring-yellow mb-8 overflow-hidden group hover:text-off-black transition-colors ease-in-out duration-500 relative">
                           <span className="absolute bottom-0 left-0 right-0 bg-yellow z-[0] h-0 group-hover:h-full transition-all ease-in-out duration-[400ms]"></span>
                           <span className="block overflow-hidden relative z-[10]">
-                            <span>Talent</span>
+                            <span>{home.getStartedRightBlockTitle}</span>
                           </span>
                         </a>
                       </div>
