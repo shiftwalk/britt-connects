@@ -1,5 +1,5 @@
 import Clock from 'react-live-clock'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 import { AnimatePresence, LazyMotion, m, domAnimation } from 'framer-motion'
 import Image from 'next/image'
@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { reveal } from '@/helpers/transitions'
 import { BioContext } from 'context/bio'
 import SanityBlockContent from '@sanity/block-content-to-react'
+import { useDetectClickOutside } from 'react-detect-click-outside';
 
 export default function Header({ bioImage, bioHeading, bioText, noBio }) {
   const [bioOpen, setBioOpen] = useState(false)
@@ -32,18 +33,38 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
   const timezoneToggle = () => {
     setTimeToggle(!timeToggle);
   }
+  
+  const timezoneClose = () => {
+    if (timeToggle) {
+      setTimeToggle(false);
+    }
+  }
 
   const timezoneUpdate = (e) => {
     setTimeToggle(false);
 
     setCurrentTimeZone(e)
   }
+
+  useEffect(() => {
+    if (scroll) {
+      scroll.on('scroll', ({ limit, scroll }) => {
+        const progress = scroll.y / limit.y * 100
+        if (progress > 0) {
+          setTimeToggle(false);
+        } else {
+        } 
+      })
+    }
+  }, [scroll, setTimeToggle])
+
+  const ref = useDetectClickOutside({ onTriggered: timezoneClose });
   
   return (
     <header className="p-3 md:p-4 xl:p-6 fixed top-0 left-0 right-0 z-[100]" id="header" data-scroll data-scroll-sticky data-scroll-target="#__next">
       <div className="fixed-target" id="fixed-target"></div>
 
-      <div className={`absolute top-0 left-0 text-off-black p-2 z-[10] mt-24 w-[185px] rounded-xl text-base transition-opacity ease-in-out duration-300 overflow-hidden ml-[45%] ${timeToggle ? 'opacity-100' : 'opacity-100 pointer-events-none' }`}>
+      <div className={`absolute top-0 left-0 text-off-black p-2 z-[10] mt-24 w-[185px] rounded-xl text-base transition-opacity ease-in-out duration-300 overflow-hidden ml-[45%] ${timeToggle ? 'opacity-100' : 'opacity-100 pointer-events-none' }`} ref={ref}>
         <div className={`bg-yellow inset-0 absolute transition-all ease-in-out duration-500 ${timeToggle ? 'h-full' : 'h-0 delay-[200ms]' }`}></div>
           <div className="relative z-[10]">
           <button onClick={()=> timezoneUpdate('la')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
@@ -51,6 +72,13 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
             <span className="block relative overflow-hidden z-[10]">
               <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0' : 'translate-y-full delay-[0ms]' }`}>Los Angeles</span>
               <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Los Angeles</span>
+            </span>
+          </button>
+          <button onClick={()=> timezoneUpdate('ch')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
+          <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
+            <span className="block relative overflow-hidden z-[10]">
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[50ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>Chicago</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Chicago</span>
             </span>
           </button>
           <button onClick={()=> timezoneUpdate('ny')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
@@ -70,15 +98,15 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
           <button onClick={()=> timezoneUpdate('sp')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
           <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
             <span className="block relative overflow-hidden z-[10]">
-              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[150ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>Sao Paolo</span>
-              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Sao Paolo</span>
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[150ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>São Paulo</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>São Paulo</span>
             </span>
           </button>
-          <button onClick={()=> timezoneUpdate('london')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
+          <button onClick={()=> timezoneUpdate('vancouver')} className="block py-1 px-2 tracking-tight w-full text-left rounded-lg relative overflow-hidden group">
             <div className="absolute bottom-0 left-0 right-0 w-full bg-off-black transition-all aese-in-out duration-300 h-0 group-hover:h-full z-[9]"></div>
             <span className="block relative overflow-hidden z-[10]">
-              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[200ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>London</span>
-              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>London</span>
+              <span className={`block transform transition-all ease-in-out duration-500 group-hover:translate-x-3 group-hover:-translate-y-[100%] text-off-black group-hover:text-yellow ${timeToggle ? 'translate-y-0 delay-[200ms] group-hover:delay-[0ms]' : 'translate-y-full delay-[0ms]' }`}>Vancouver</span>
+              <span className={`absolute inset-0 block transform transition-all ease-in-out duration-500 text-off-black group-hover:text-yellow translate-y-full group-hover:translate-y-0 -translate-x-3 group-hover:translate-x-0`}>Vancouver</span>
             </span>
           </button>
         </div>
@@ -111,14 +139,17 @@ export default function Header({ bioImage, bioHeading, bioText, noBio }) {
                 { currentTimeZone == 'ny' && (
                   <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/New_York'} /></span>, <span className="hidden md:inline-block">New York ▾</span><span className="inline-block md:hidden">NY</span></span>
                 )}
+                { currentTimeZone == 'ch' && (
+                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/Chicago'} /></span>, <span className="hidden md:inline-block">Chicago ▾</span><span className="inline-block md:hidden">CH</span></span>
+                )}
                 { currentTimeZone == 'ba' && (
                   <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/Argentina/Buenos_Aires'} /></span>, <span className="hidden md:inline-block">Buenos Aires ▾</span><span className="inline-block md:hidden">BA</span></span>
                 )}
                 { currentTimeZone == 'sp' && (
-                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/Sao_Paulo'} /></span>, <span className="hidden md:inline-block">Sao Paolo ▾</span><span className="inline-block md:hidden">SP</span></span>
+                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/Sao_Paulo'} /></span>, <span className="hidden md:inline-block">São Paulo ▾</span><span className="inline-block md:hidden">SP</span></span>
                 )}
-                { currentTimeZone == 'london' && (
-                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'Europe/London'} /></span>, <span className="hidden md:inline-block">London ▾</span><span className="inline-block md:hidden">UK</span></span>
+                { currentTimeZone == 'vancouver' && (
+                  <span className="block leading-none"><span className="tabular-nums"><Clock format={'HH:mm:ss'} ticking={true} timezone={'America/Vancouver'} /></span>, <span className="hidden md:inline-block">Vancouver ▾</span><span className="inline-block md:hidden">VC</span></span>
                 )}
               </m.div>
             </div>
